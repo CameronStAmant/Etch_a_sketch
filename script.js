@@ -3,13 +3,13 @@ btn.style.margin = '10px 10px 10px 10px';
 btn.innerHTML = 'Reset';
 btn.id ='button';
 
-gridSize = 4;
+gridSize = 2;
 
 document.body.appendChild(btn);
 let getBtn = document.getElementById('button');
 getBtn.addEventListener('click', () => {
   gridSize = parseInt(prompt('Grid size?'));
-  gridSize *= gridSize;
+  // gridSize *= gridSize;
   clearGrid();
   grid();
 });
@@ -25,12 +25,13 @@ const getInnerDiv = document.getElementById('container');
 let a = 0;
 
 function grid () {
-for (let i = 0; i < gridSize; i++) {
-  let i = document.createElement('div');
-  a++;
-  i.id = 'a';
-  getInnerDiv.appendChild(i);
-}
+  for (let i = 0; i < gridSize * gridSize; i++) {
+    let i = document.createElement('div');
+    a++;
+    i.id = 'a';
+    getInnerDiv.appendChild(i);
+    
+  }
 }
 
 grid();
