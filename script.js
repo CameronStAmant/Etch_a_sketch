@@ -4,6 +4,8 @@ btn.innerHTML = 'Reset';
 btn.id ='button';
 
 gridSize = 2;
+var gridCount = document.body.style;
+gridCount.setProperty('--a', gridSize);
 
 document.body.appendChild(btn);
 let getBtn = document.getElementById('button');
@@ -29,6 +31,7 @@ function grid () {
     let i = document.createElement('div');
     a++;
     i.id = 'a';
+    gridCount.setProperty('--a', gridSize);
     getInnerDiv.appendChild(i);
     
   }
