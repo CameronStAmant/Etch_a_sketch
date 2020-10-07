@@ -11,7 +11,6 @@ document.body.appendChild(btn);
 let getBtn = document.getElementById('button');
 getBtn.addEventListener('click', () => {
   gridSize = parseInt(prompt('Grid size?'));
-  // gridSize *= gridSize;
   clearGrid();
   grid();
 });
