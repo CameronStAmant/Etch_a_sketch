@@ -4,13 +4,16 @@ btn.innerHTML = 'Reset';
 btn.id ='button';
 
 gridSize = 2;
-var gridCount = document.body.style;
+let gridCount = document.body.style;
 gridCount.setProperty('--a', gridSize);
 
 document.body.appendChild(btn);
 let getBtn = document.getElementById('button');
 getBtn.addEventListener('click', () => {
-  gridSize = parseInt(prompt('Grid size?'));
+  gridSize = parseInt(prompt('Grid size? Choose 1 - 100.'));
+  while (gridSize < 1 || gridSize > 100) {
+    gridSize = parseInt(prompt('That is not an acceptable grid size, please choose again.'));
+  }
   clearGrid();
   grid();
 });
